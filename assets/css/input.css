@@ -1,1 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-hijau-tua: #01495b;
+  --color-hijau: #05b5b3;
+  --color-hitam: #2c2c2c;
+  --font-sans: "Geist", sans-serif;
+}
+
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
