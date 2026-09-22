@@ -23,7 +23,7 @@
     opacity 0.25s ease;
 }
 #navInner.expanded #navMenuItems {
-  max-height: 400px;
+  max-height: 500px;
   opacity: 1;
 }
 .custom-scroll::-webkit-scrollbar {
