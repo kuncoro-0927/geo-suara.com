@@ -667,6 +667,9 @@
   .pt-28 {
     padding-top: calc(var(--spacing) * 28);
   }
+  .pt-44 {
+    padding-top: calc(var(--spacing) * 44);
+  }
   .pr-2 {
     padding-right: calc(var(--spacing) * 2);
   }
