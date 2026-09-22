@@ -12,33 +12,89 @@
     >
       <nav
         id="navbar"
-        class="fixed z-50 w-full bg-transparent top-0 flex items-center justify-between px-6 py-3 xl:px-20 xl:py-3"
+        class="fixed z-50 inset-x-0 top-0 bg-transparent transition-all duration-300"
       >
-        <div class="h-14">
-          <img class="h-full" src="./assets/images/logo-geo.png" alt="" />
-        </div>
+        <!-- Wrapper margin luar (cuma ini yang di-toggle marginnya) -->
+        <div id="navInner" class="transition-all duration-300 mx-0">
+          <!-- Wrapper padding dalam (cuma ini yang di-toggle paddingnya) -->
+          <div
+            id="navContent"
+            class="bg-transparent transition-all duration-300 px-6 py-3 xl:px-20 xl:py-3"
+          >
+            <!-- Top row -->
+            <div class="flex items-center justify-between">
+              <div class="h-14">
+                <img class="h-full" src="./assets/images/logo-geo.png" alt="" />
+              </div>
 
-        <div
-          class="hidden lg:block absolute left-1/2 -translate-x-1/2 items-center"
-        >
-          <ul
-            class="font-medium text-base text-hijau-tua flex items-center gap-6"
-          >
-            <li class="">Insight</li>
-            <li class="">GEO vs SEO</li>
-            <li class="">How It Works</li>
-            <li class="">Services</li>
-            <li class="">Tools</li>
-          </ul>
+              <div
+                class="hidden lg:block absolute left-1/2 -translate-x-1/2 items-center"
+              >
+                <ul
+                  class="font-medium text-base text-hijau-tua flex items-center gap-6"
+                >
+                  <li>Insight</li>
+                  <li>GEO vs SEO</li>
+                  <li>How It Works</li>
+                  <li>Services</li>
+                  <li>Tools</li>
+                </ul>
+              </div>
+
+              <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 w-7">
+                <span
+                  id="line1"
+                  class="block h-0.5 w-full bg-hijau-tua transition-all duration-300"
+                ></span>
+                <span
+                  id="line2"
+                  class="block h-0.5 w-full bg-hijau-tua transition-all duration-300"
+                ></span>
+              </button>
+            </div>
+
+            <!-- Menu items -->
+            <div id="navMenuItems">
+              <ul class="flex flex-col gap-1 text-center pt-2">
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 text-lg font-medium text-hijau-tua"
+                    >Insight</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 text-lg font-medium text-hijau-tua"
+                    >GEO vs SEO</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 text-lg font-medium text-hijau-tua"
+                    >How It Works</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 text-lg font-medium text-hijau-tua"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 text-lg font-medium text-hijau-tua"
+                    >Tools</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <!-- <div>
-          <button
-            class="leading-none text-white px-6 py-4 rounded-full bg-linear-to-r bg-[#2BE5A6]/70"
-          >
-            Lorem, ipsum.
-          </button>
-        </div> -->
-        <button class="lg:hidden font-medium text-hijau-tua">Menu</button>
       </nav>
 
       <div
@@ -1208,7 +1264,7 @@
         </ul>
 
         <div
-          class="flex flex-row lg:flex-col items-start justify-between w-full lg:gap-3"
+          class="flex flex-row lg:flex-col items-start justify-between w-full lg:w-fit lg:gap-3"
         >
           <ul
             class="flex flex-col lg:flex-row items-start lg:items-center gap-4 font-medium text-[#6c6c6c] text-sm"
@@ -1282,7 +1338,55 @@
     <script>
       const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
-        navbar.classList.toggle("scrolled", window.scrollY > 20);
+        document
+          .getElementById("navbar")
+          .classList.toggle("scrolled", window.scrollY > 20);
+      });
+    </script>
+
+    <script>
+      const navInner = document.getElementById("navInner");
+      const navContent = document.getElementById("navContent");
+      const menuBtn = document.getElementById("menuBtn");
+      const line1 = document.getElementById("line1");
+      const line2 = document.getElementById("line2");
+
+      menuBtn.addEventListener("click", () => {
+        const isOpen = navInner.classList.toggle("expanded");
+
+        if (isOpen) {
+          navInner.classList.remove("mx-0");
+          navInner.classList.add("mx-2", "lg:mx-8");
+
+          navContent.classList.remove("bg-transparent", "px-6", "xl:px-20");
+          navContent.classList.add(
+            "bg-white/40",
+            "backdrop-blur-xl",
+            "shadow-lg",
+            "rounded-b-3xl",
+            "px-4",
+            "xl:px-16",
+          );
+
+          line1.style.transform = "rotate(45deg) translateY(4px)";
+          line2.style.transform = "rotate(-45deg) translateY(-4px)";
+        } else {
+          navInner.classList.add("mx-0");
+          navInner.classList.remove("mx-2", "lg:mx-8");
+
+          navContent.classList.add("bg-transparent", "px-6", "xl:px-20");
+          navContent.classList.remove(
+            "bg-white/40",
+            "backdrop-blur-xl",
+            "shadow-lg",
+            "rounded-b-3xl",
+            "px-4",
+            "xl:px-16",
+          );
+
+          line1.style.transform = "none";
+          line2.style.transform = "none";
+        }
       });
     </script>
 
