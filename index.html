@@ -3,22 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GE0</title>
+    <title>GEO</title>
     <link rel="stylesheet" href="assets/css/output.css" />
   </head>
   <body>
     <header class="bg-linear-to-r from-[#0FA458]/10 via-white to-[#05B5B3]/40">
       <nav
         id="navbar"
-        class="fixed z-10 w-full bg-transparent top-0 flex items-center justify-between xl:px-16 xl:py-4"
+        class="fixed z-50 w-full bg-transparent top-0 flex items-center justify-between px-6 py-3 xl:px-20 xl:py-3"
       >
-        <div class=""><span>logo</span></div>
-        <div class="absolute left-1/2 -translate-x-1/2 items-center">
-          <ul class="flex items-center gap-3">
-            <li>lorem</li>
-            <li>lorem</li>
-            <li>lorem</li>
-            <li>lorem</li>
+        <div class="h-14">
+          <img class="h-full" src="./assets/images/logo-geo-2.svg" alt="" />
+        </div>
+        <div
+          class="hidden lg:block absolute left-1/2 -translate-x-1/2 items-center"
+        >
+          <ul
+            class="font-medium text-base text-hijau-tua flex items-center gap-6"
+          >
+            <li class="">Insight</li>
+            <li class="">GEO vs SEO</li>
+            <li class="">How It Works</li>
+            <li class="">Services</li>
+            <li class="">Tools</li>
           </ul>
         </div>
         <!-- <div>
@@ -28,30 +35,33 @@
             Lorem, ipsum.
           </button>
         </div> -->
+        <button class="lg:hidden font-medium text-hijau-tua">Menu</button>
       </nav>
 
       <div
-        class="mx-auto flex flex-col justify-center items-center text-center py-28 pb-20"
+        class="mx-auto flex flex-col justify-center items-center text-center px-6 pt-28 pb-10 lg:py-28 lg:pb-20"
       >
-        <div class="flex items-center justify-center">
+        <div class="flex flex-col lg:flex-row items-center justify-center">
           <span
             class="font-semibold bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
             >Generative Engine Optimization by</span
           ><img
-            class="w-auto h-12 -translate-x-1"
+            class="w-auto h-8 lg:h-12 -translate-x-1"
             src="./assets/images/logo-suara.png"
             alt=""
           />
         </div>
-        <h1 class="text-6xl text-[#01495B] mx-auto font-semibold xl:max-w-3xl">
-          Positioning brand Anda <br />
-          di era
+        <h1
+          class="text-4xl lg:text-6xl text-[#01495B] mx-auto font-semibold xl:max-w-3xl"
+        >
+          Positioning your brand in <br />
+          the era of
           <span
             class="bg-linear-to-r from-[#01495B] to-[#05B5B3] bg-clip-text text-transparent"
             >AI Search</span
           >
         </h1>
-        <p class="text-[#6c6c6c] mt-3">
+        <p class="text-sm lg:text-base text-[#6c6c6c] mt-3">
           AI-generated responses kini jadi primary touchpoint konsumen, dari
           citation hingga conversion yang terukur.
         </p>
@@ -69,8 +79,10 @@
             class="font-semibold bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
             >Tracking of 4 AI Search Engines</span
           >
-          <div class="flex items-center gap-14 mt-6">
-            <div class="h-10 p-1 pr-2 rounded-md flex items-center gap-2">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 items-center gap-y-3 lg:gap-14 mt-6"
+          >
+            <div class="h-10 p-1 pr-2 rounded-md flex w-fit items-center gap-2">
               <img
                 class="h-full w-auto rounded-lg"
                 src="./assets/images/logo-chatgpt.svg"
@@ -84,21 +96,23 @@
               </div>
             </div>
 
-            <div class="h-10 p-1 pr-2 rounded-md flex items-center gap-2">
+            <div class="h-10 p-1 pr-2 rounded-md flex w-fit items-center gap-2">
               <img
                 class="h-full w-auto rounded-lg"
                 src="./assets/images/logo-google.svg"
                 alt=""
               />
               <div class="flex flex-col items-start">
-                <span class="font-medium text-sm">Google AI Overviews</span>
+                <span class="font-medium text-sm whitespace-nowrap"
+                  >Google AI Overviews</span
+                >
                 <!-- <span class="text-sm font-medium text-[#6c6c6c]"
                   >Google/Alphabet - Gemini</span
                 > -->
               </div>
             </div>
 
-            <div class="h-10 p-1 pr-2 rounded-md flex items-center gap-2">
+            <div class="h-10 p-1 pr-2 rounded-md flex w-fit items-center gap-2">
               <img
                 class="h-full w-auto rounded-lg"
                 src="./assets/images/logo-perplexity.svg"
@@ -112,7 +126,7 @@
               </div>
             </div>
 
-            <div class="h-10 p-1 pr-2 rounded-md flex items-center gap-2">
+            <div class="h-10 p-1 pr-2 rounded-md flex w-fit items-center gap-2">
               <img
                 class="h-full w-auto rounded-lg"
                 src="./assets/images/logo-microsoft-copilot.svg"
@@ -130,226 +144,327 @@
       </div>
     </header>
 
-    <main>
+    <main class="">
       <!-- SECTION COMPARISON TABLE -->
-      <section class="min-h-screen xl:p-20">
-        <div class="flex flex-col gap-2">
-          <h2 class="font-semibold text-5xl">
-            <span
-              class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
-              >GEO VS SEO:</span
-            >
-            Lorem ipsum dolor sit amet.
+      <section class="p-6 py-16 xl:p-20">
+        <div
+          class="flex flex-col justify-center text-center items-center gap-2"
+        >
+          <h2
+            class="font-semibold text-3xl lg:text-5xl bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+          >
+            GEO VS SEO <br />
+            <span class="text-black"> amet consectetur.</span>
           </h2>
-          <span class="text-[#6c6c6c]"
+          <span class="text-sm lg:text-base text-[#6c6c6c]"
             >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Officia.</span
           >
         </div>
 
+        <div id="tableScroll" class="mt-10 overflow-x-auto scrollbar-hide">
+          <div
+            class="p-6 flex rounded-2xl bg-white border border-black/20 w-fit lg:w-full"
+          >
+            <!-- Kolom FEATURE -->
+            <div class="w-[220px] lg:w-full my-[1.5px]">
+              <div class="px-6 py-4">
+                <span class="font-semibold">Dimensi</span>
+              </div>
+              <div
+                class="px-6 font-medium bg-slate-100 py-4 border-t border-gray-200"
+              >
+                Primary Objective
+              </div>
+              <div class="px-6 font-medium py-4 border-t border-gray-200">
+                Target Platforms
+              </div>
+              <div
+                class="px-6 font-medium bg-slate-100 py-4 border-t border-gray-200"
+              >
+                KPI Framework
+              </div>
+              <div class="px-6 font-medium py-4 border-t border-gray-200">
+                Content Strategy
+              </div>
+              <div
+                class="px-6 font-medium bg-slate-100 py-4 border-t border-gray-200"
+              >
+                Conversion Path
+              </div>
+            </div>
+
+            <!-- Kolom SEO -->
+            <div class="w-[350px] lg:w-full my-[1.5px]">
+              <div class="px-6 py-4">
+                <span class="font-semibold text-[#6c6c6c]"
+                  >SEO (Traditional)</span
+                >
+              </div>
+              <div
+                class="px-6 flex items-center gap-3 bg-slate-100 py-4 border-t border-gray-200 text-[#6c6c6c]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                  />
+                </svg>
+                SERP Ranking #1
+              </div>
+              <div
+                class="px-6 flex items-center gap-3 py-4 border-t border-gray-200 text-[#6c6c6c]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                  />
+                </svg>
+                Google, Bing
+              </div>
+              <div
+                class="px-6 flex items-center gap-3 bg-slate-100 py-4 border-t border-gray-200 text-[#6c6c6c]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                  />
+                </svg>
+                Rank, Impressions, CTR
+              </div>
+              <div
+                class="px-6 flex items-center gap-3 py-4 border-t border-gray-200 text-[#6c6c6c]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                  />
+                </svg>
+                Keyword-centric
+              </div>
+              <div
+                class="px-6 flex items-center gap-3 bg-slate-100 py-4 border-t border-gray-200 text-[#6c6c6c]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                  />
+                </svg>
+                Click &gt; Landing Page &gt; Convert
+              </div>
+            </div>
+
+            <!-- Kolom GEO -->
+            <div
+              class="w-[420px] lg:w-fit shrink-0 rounded-2xl border-[1.5px] z-10 pb-4 border-hijau bg-hijau/5"
+            >
+              <div class="px-6 py-4">
+                <span
+                  class="font-semibold bg-linear-to-r from-hijau-tua to-hijau text-transparent bg-clip-text"
+                  >GEO (AI-Native)</span
+                >
+              </div>
+              <div
+                class="px-6 bg-slate-100 flex items-center gap-3 py-4 border-t border-gray-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <defs>
+                    <linearGradient
+                      id="gradPatchCheck"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stop-color="#01495b" />
+                      <stop offset="100%" stop-color="#05b5b3" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    fill="url(#gradPatchCheck)"
+                    d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"
+                  />
+                </svg>
+
+                AI Citation + Conversion
+              </div>
+
+              <div
+                class="px-6 flex items-center gap-3 py-4 border-t border-gray-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <defs>
+                    <linearGradient
+                      id="gradPatchCheck"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stop-color="#01495b" />
+                      <stop offset="100%" stop-color="#05b5b3" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    fill="url(#gradPatchCheck)"
+                    d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"
+                  />
+                </svg>
+                ChatGPT | Google AI | Perplexity | Copilot
+              </div>
+
+              <div
+                class="px-6 bg-slate-100 flex items-center gap-3 py-4 border-t border-gray-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <defs>
+                    <linearGradient
+                      id="gradPatchCheck"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stop-color="#01495b" />
+                      <stop offset="100%" stop-color="#05b5b3" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    fill="url(#gradPatchCheck)"
+                    d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"
+                  />
+                </svg>
+                Citation Rate | AI Referral CVR | Share of Voice
+              </div>
+
+              <div
+                class="px-6 flex items-center gap-3 py-4 border-t border-gray-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <defs>
+                    <linearGradient
+                      id="gradPatchCheck"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stop-color="#01495b" />
+                      <stop offset="100%" stop-color="#05b5b3" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    fill="url(#gradPatchCheck)"
+                    d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"
+                  />
+                </svg>
+                Entity authority + answer-first architecture
+              </div>
+
+              <div
+                class="px-6 bg-slate-100 flex items-center gap-3 py-4 border-t border-gray-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <defs>
+                    <linearGradient
+                      id="gradPatchCheck"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stop-color="#01495b" />
+                      <stop offset="100%" stop-color="#05b5b3" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    fill="url(#gradPatchCheck)"
+                    d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8m5.904 2.803a.5.5 0 1 1-.707-.707L9.293 6H6.525a.5.5 0 1 1 0-1H10.5a.5.5 0 0 1 .5.5v3.975a.5.5 0 0 1-1 0V6.707z"
+                  />
+                </svg>
+                AI Cite &gt; Trust established &gt; Direct intent
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div
-          class="mt-10 p-6 border border-black/20 flex justify-center rounded-2xl overflow-hidden shadow-md"
+          id="scrollTrack"
+          class="h-2 w-32 mx-auto lg:hidden bg-[#ECECEC] rounded-full mt-4 relative cursor-pointer"
         >
-          <!-- Kolom FEATURE -->
-          <div class="w-full">
-            <div class="px-6 py-4">
-              <span class="font-semibold">Dimensi</span>
-            </div>
-            <div class="px-6 py-4 border-t border-gray-200 text-[#6c6c6c]">
-              Primary Objective
-            </div>
-            <div class="px-6 py-4 border-t border-gray-200 text-[#6c6c6c]">
-              Target Platforms
-            </div>
-            <div class="px-6 py-4 border-t border-gray-200 text-[#6c6c6c]">
-              KPI Framework
-            </div>
-            <div class="px-6 py-4 border-t border-gray-200 text-[#6c6c6c]">
-              Content Strategy
-            </div>
-            <div class="px-6 py-4 border-t border-gray-200 text-[#6c6c6c]">
-              Conversion Path
-            </div>
-          </div>
-
-          <!-- Kolom SEO -->
-          <div class="w-full">
-            <div class="px-6 py-4">
-              <span class="font-semibold text-[#EF4444]"
-                >SEO (Traditional)</span
-              >
-            </div>
-            <div class="px-6 py-4 border-t border-gray-200 text-[#6c6c6c]">
-              SERP Ranking #1
-            </div>
-            <div class="px-6 py-4 border-t border-gray-200 text-[#6c6c6c]">
-              Google, Bing
-            </div>
-            <div class="px-6 py-4 border-t border-gray-200 text-[#6c6c6c]">
-              Rank, Impressions, CTR
-            </div>
-            <div class="px-6 py-4 border-t border-gray-200 text-[#6c6c6c]">
-              Keyword-centric
-            </div>
-            <div class="px-6 py-4 border-t border-gray-200 text-[#6c6c6c]">
-              Click &gt; Landing Page &gt; Convert
-            </div>
-          </div>
-
-          <!-- Kolom GEO -->
-          <div class="w-fit shrink-0 rounded-2xl">
-            <div class="px-6 py-4">
-              <span
-                class="font-semibold bg-linear-to-r from-hijau-tua to-hijau text-transparent bg-clip-text"
-                >GEO (AI-Native)</span
-              >
-            </div>
-            <div
-              class="px-6 flex items-center gap-3 py-4 border-t border-gray-200"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                class="bi bi-patch-check-fill"
-                viewBox="0 0 16 16"
-              >
-                <defs>
-                  <linearGradient
-                    id="gradPatchCheck"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop offset="0%" stop-color="#01495b" />
-                    <stop offset="100%" stop-color="#05b5b3" />
-                  </linearGradient>
-                </defs>
-                <path
-                  fill="url(#gradPatchCheck)"
-                  d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"
-                />
-              </svg>
-              AI Citation + Conversion
-            </div>
-            <div
-              class="px-6 flex items-center gap-3 py-4 border-t border-gray-200"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                class="bi bi-patch-check-fill"
-                viewBox="0 0 16 16"
-              >
-                <defs>
-                  <linearGradient
-                    id="gradPatchCheck"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop offset="0%" stop-color="#01495b" />
-                    <stop offset="100%" stop-color="#05b5b3" />
-                  </linearGradient>
-                </defs>
-                <path
-                  fill="url(#gradPatchCheck)"
-                  d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"
-                />
-              </svg>
-              ChatGPT | Google AI | Perplexity | Copilot
-            </div>
-            <div
-              class="px-6 flex items-center gap-3 py-4 border-t border-gray-200"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                class="bi bi-patch-check-fill"
-                viewBox="0 0 16 16"
-              >
-                <defs>
-                  <linearGradient
-                    id="gradPatchCheck"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop offset="0%" stop-color="#01495b" />
-                    <stop offset="100%" stop-color="#05b5b3" />
-                  </linearGradient>
-                </defs>
-                <path
-                  fill="url(#gradPatchCheck)"
-                  d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"
-                />
-              </svg>
-              Citation Rate | AI Referral CVR | Share of Voice
-            </div>
-            <div
-              class="px-6 flex items-center gap-3 py-4 border-t border-gray-200"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                class="bi bi-patch-check-fill"
-                viewBox="0 0 16 16"
-              >
-                <defs>
-                  <linearGradient
-                    id="gradPatchCheck"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop offset="0%" stop-color="#01495b" />
-                    <stop offset="100%" stop-color="#05b5b3" />
-                  </linearGradient>
-                </defs>
-                <path
-                  fill="url(#gradPatchCheck)"
-                  d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"
-                />
-              </svg>
-              Entity authority + answer-first architecture
-            </div>
-            <div
-              class="px-6 flex items-center gap-3 py-4 border-t border-gray-200"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                class="bi bi-patch-check-fill"
-                viewBox="0 0 16 16"
-              >
-                <defs>
-                  <linearGradient
-                    id="gradPatchCheck"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop offset="0%" stop-color="#01495b" />
-                    <stop offset="100%" stop-color="#05b5b3" />
-                  </linearGradient>
-                </defs>
-                <path
-                  fill="url(#gradPatchCheck)"
-                  d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"
-                />
-              </svg>
-              AI Cite &gt; Trust established &gt; Direct intent
-            </div>
-          </div>
+          <div
+            id="scrollThumb"
+            class="h-2 bg-linear-to-r from-hijau-tua to-hijau rounded-full absolute top-0 left-0 cursor-grab active:cursor-grabbing"
+          ></div>
         </div>
 
         <!-- <div
@@ -364,11 +479,11 @@
       </section>
 
       <!-- SECTION HOW IT WORKS -->
-      <section class="xl:p-20 bg-gray-100">
+      <section class="p-6 py-16 xl:p-20 bg-gray-100">
         <div
           class="flex flex-col justify-center text-center items-center gap-2"
         >
-          <h2 class="font-semibold text-5xl">
+          <h2 class="font-semibold text-3xl lg:text-5xl">
             Lorem ipsum dolor sit <br />
             <span
               class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
@@ -376,17 +491,17 @@
               amet consectetur.</span
             >
           </h2>
-          <span class="text-[#6c6c6c]"
+          <span class="text-sm lg:text-base text-[#6c6c6c]"
             >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Officia.</span
           >
         </div>
 
         <div
-          class="border border-black/20 rounded-2xl grid grid-cols-4 mt-10 bg-white"
+          class="border border-black/20 rounded-2xl grid grid-cols-1 lg:grid-cols-4 mt-10 bg-white"
         >
           <div
-            class="border-r border-black/20 flex flex-col p-6 justify-start items-center text-center"
+            class="border-b lg:border-r border-black/20 flex flex-col p-6 justify-start items-center text-center"
           >
             <span
               class="font-semibold bg-linear-to-r from-[#01495B] to-[#05B5B3] bg-clip-text text-transparent"
@@ -399,7 +514,7 @@
           </div>
 
           <div
-            class="border-r border-black/20 flex flex-col p-6 justify-start items-center text-center"
+            class="border-b lg:border-r border-black/20 flex flex-col p-6 justify-start items-center text-center"
           >
             <span
               class="font-semibold bg-linear-to-r from-[#01495B] to-[#05B5B3] bg-clip-text text-transparent"
@@ -412,7 +527,7 @@
             </p>
           </div>
           <div
-            class="border-r border-black/20 flex flex-col p-6 justify-start items-center text-center"
+            class="border-b lg:border-r border-black/20 flex flex-col p-6 justify-start items-center text-center"
           >
             <span
               class="font-semibold bg-linear-to-r from-[#01495B] to-[#05B5B3] bg-clip-text text-transparent"
@@ -424,9 +539,7 @@
               2.8% organic.
             </p>
           </div>
-          <div
-            class="flex flex-col p-6 justify-start items-center text-center"
-          >
+          <div class="flex flex-col p-6 justify-start items-center text-center">
             <span
               class="font-semibold bg-linear-to-r from-[#01495B] to-[#05B5B3] bg-clip-text text-transparent"
               >Stage 4 - Brand Equity</span
@@ -440,53 +553,60 @@
         </div>
 
         <div
-          class="mt-20 flex flex-col justify-center text-center items-center gap-2"
+          class="mt-10 lg:mt-20 flex flex-col justify-center text-center items-center gap-2"
         >
-          <h2 class="font-semibold text-5xl">
+          <h2 class="font-semibold text-3xl lg:text-5xl">
             <span
               class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
             >
               Business Impact</span
             >
           </h2>
-          <span class="text-[#6c6c6c]"
+          <span class="text-sm lg:text-base text-[#6c6c6c]"
             >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Officia.</span
           >
         </div>
+
         <div
-          class="flex items-center justify-center gap-32 p-1 w-fit mx-auto mt-10 rounded-xl"
+          class="flex items-center justify-center gap-10 lg:gap-32 p-1 w-fit mx-auto mt-10 rounded-xl"
         >
-          <div class="flex flex-col-reverse items-center justify-center gap-2">
+          <div
+            class="flex flex-col-reverse items-center text-center justify-center gap-2"
+          >
             <span class="">AI Referral CVR </span>
             <span
-              class="font-medium text-6xl bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+              class="font-medium text-3xl lg:text-6xl bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
               >14.2%</span
             >
           </div>
-          <div class="flex flex-col-reverse items-center justify-center gap-2">
+          <div
+            class="flex flex-col-reverse items-center text-center justify-center gap-2"
+          >
             <span class="">Google Organic CVR </span>
             <span
-              class="font-medium text-6xl bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+              class="font-medium text-3xl lg:text-6xl bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
               >2.8%</span
             >
           </div>
-          <div class="flex flex-col-reverse items-center justify-center gap-2 pr-3">
+          <div
+            class="flex flex-col-reverse items-center text-center justify-center gap-2"
+          >
             <span class="">Multiplier Effect </span>
             <span
-              class="font-medium text-6xl bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+              class="font-medium text-3xl lg:text-6xl bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
               >5.1x</span
             >
           </div>
         </div>
       </section>
 
-      <!-- SECTION PRICING -->
-      <section class="xl:p-20">
+      <!-- SECTION SERVICES -->
+      <section class="p-6 py-10 xl:p-20">
         <div
           class="flex flex-col justify-center text-center items-center gap-2"
         >
-          <h2 class="font-semibold text-5xl">
+          <h2 class="font-semibold text-3xl lg:text-5xl">
             Lorem ipsum dolor sit <br />
             <span
               class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
@@ -494,13 +614,15 @@
               amet consectetur.</span
             >
           </h2>
-          <span class="text-[#6c6c6c]"
+          <span class="text-sm lg:text-base text-[#6c6c6c]"
             >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Officia.</span
           >
         </div>
 
-        <div class="mt-16 flex items-stretch justify-between w-full gap-10">
+        <div
+          class="mt-10 flex flex-col lg:flex-row items-stretch justify-between w-full gap-10"
+        >
           <!-- TIER 1 -->
           <div
             class="border-[1.5px] border-black/20 p-1 rounded-2xl w-full hover:border-hijau hover:shadow-xl hover:border-[1.5px] duration-200 cursor-pointer"
@@ -763,18 +885,215 @@
         </div>
       </section>
 
+      <!-- SECTION TOOLS -->
+      <section class="p-6 py-10 xl:p-20">
+        <div
+          class="flex flex-col justify-center text-center items-center gap-2"
+        >
+          <h2 class="font-semibold text-3xl lg:text-5xl">
+            AI-Powered Tools for Smarter <br />
+            <span
+              class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+            >
+              GEO Execution</span
+            >
+          </h2>
+          <span class="text-sm lg:text-base text-[#6c6c6c]"
+            >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Officia.</span
+          >
+        </div>
+
+        <!-- Cards -->
+        <div
+          class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:gap-5 lg:gap-7 mt-10"
+        >
+          <!-- Card 1 -->
+          <div
+            class="p-6 flex h-full flex-col overflow-hidden rounded-[18px] border border-black/20 shadow-sm hover:border-hijau hover:shadow-xl duration-200 cursor-pointer"
+          >
+            <div class="flex items-center justify-between">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-r from-hijau-tua to-hijau"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-scan-search preview-icon"
+                >
+                  <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+                  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+                  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+                  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="m16 16-1.9-1.9" />
+                </svg>
+              </div>
+              <span
+                class="text-3xl font-semibold bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+              >
+                01
+              </span>
+            </div>
+
+            <div class="z-10 mt-6 flex h-full flex-col">
+              <div class="mb-3">
+                <span class="text-sm text-[#6c6c6c] font-medium">
+                  Tools - Audit
+                </span>
+              </div>
+
+              <h3
+                class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent font-semibold text-lg leading-snug"
+              >
+                GEO Content Audit
+              </h3>
+
+              <p class="mt-2 text-[#6c6c6c] text-sm leading-relaxed">
+                Tools yang dirancang untuk mengevaluasi kualitas content dari
+                sisi technical readiness, topical depth, dan kemampuan content
+                untuk dipahami oleh search engine maupun AI systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="p-6 flex h-full flex-col overflow-hidden rounded-[18px] border border-black/20 shadow-sm hover:border-hijau hover:shadow-xl duration-200 cursor-pointer"
+          >
+            <div class="flex items-center justify-between">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-r from-hijau-tua to-hijau"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-file-video-camera preview-icon"
+                >
+                  <path
+                    d="M4 12V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2"
+                  />
+                  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                  <path
+                    d="m10 17.843 3.033-1.755a.64.64 0 0 1 .967.56v4.704a.65.65 0 0 1-.967.56L10 20.157"
+                  />
+                  <rect width="7" height="6" x="3" y="16" rx="1" />
+                </svg>
+              </div>
+              <span
+                class="text-3xl font-semibold bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+              >
+                02
+              </span>
+            </div>
+
+            <div class="z-10 mt-6 flex h-full flex-col">
+              <div class="mb-3">
+                <span class="text-sm text-[#6c6c6c] font-medium">
+                  Tools - Creator
+                </span>
+              </div>
+
+              <h3
+                class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent font-semibold text-lg leading-snug"
+              >
+                GEO Content Creator
+              </h3>
+
+              <p class="mt-2 text-[#6c6c6c] text-sm leading-relaxed">
+                Tools yang membantu tim editorial menghasilkan content yang
+                lebih terstruktur, relevan, dan memiliki konteks yang kuat untuk
+                search engine serta AI-generated responses.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="p-6 flex h-full flex-col overflow-hidden rounded-[18px] border border-black/20 shadow-sm hover:border-hijau hover:shadow-xl duration-200 cursor-pointer"
+          >
+            <div class="flex items-center justify-between">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-md bg-linear-to-r from-hijau-tua to-hijau"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chart-no-axes-combined preview-icon"
+                >
+                  <path d="M12 16v5" />
+                  <path d="M16 14.639V21" />
+                  <path d="M20 10.656V21" />
+                  <path
+                    d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"
+                  />
+                  <path d="M4 18.463V21" />
+                  <path d="M8 14.656V21" />
+                </svg>
+              </div>
+              <span
+                class="text-3xl font-semibold bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+              >
+                03
+              </span>
+            </div>
+
+            <div class="z-10 mt-6 flex h-full flex-col">
+              <div class="mb-3">
+                <span class="text-sm text-[#6c6c6c] font-medium">
+                  Tools - Monitoring
+                </span>
+              </div>
+
+              <h3
+                class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent font-semibold text-lg leading-snug"
+              >
+                GEO Monitoring
+              </h3>
+
+              <p class="mt-2 text-[#6c6c6c] text-sm leading-relaxed">
+                Memonitor visibility, brand coverage, dan perubahan citation
+                dari berbagai prompt untuk memahami bagaimana brand muncul dan
+                direpresentasikan di platform AI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- SECTION CTA -->
       <section
-        class="shadow-md xl:m-20 p-16 rounded-4xl bg-linear-to-r from-hijau-tua to-hijau text-white"
+        class="shadow-md m-6 p-8 xl:m-20 lg:p-16 rounded-4xl bg-linear-to-r from-hijau-tua to-hijau text-white"
       >
         <div
           class="flex flex-col justify-center text-center items-center gap-2"
         >
-          <h2 class="font-semibold text-5xl">
+          <h2 class="font-semibold text-3xl lg:text-5xl">
             Secure your brand's position <br />
             in AI Search.
           </h2>
-          <span class="max-w-2xl"
+          <span class="text-sm lg:text-base max-w-2xl"
             >Every day without GEO, competitors compound their AI authority. The
             first-mover window in your industry may still be open - but not
             indefinitely.</span
@@ -784,17 +1103,11 @@
             <button class="px-6 py-3 rounded-full mt-6 bg-white text-hijau-tua">
               Lorem, ipsum.
             </button>
-
-            <button
-              class="px-6 py-3 rounded-full mt-6 border-white border-[1.5px]"
-            >
-              Lorem, ipsum.
-            </button>
           </div>
 
           <div class="border border-white/10 w-full flex my-10"></div>
           <div
-            class="flex justify-center mx-auto text-center items-start gap-10"
+            class="flex flex-col lg:flex-row justify-center mx-auto text-center items-center gap-10"
           >
             <div class="flex flex-col">
               <span class="text-3xl font-medium">30 Days</span
@@ -818,12 +1131,209 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="p-6 py-10 xl:p-20">
+      <div>
+        <div class="h-20">
+          <img class="h-full" src="./assets/images/logo-geo-2.svg" alt="" />
+        </div>
+        <span class="text-sm lg:text-base text-[#6c6c6c]"
+          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
+          Non saepe a repellat dolorum ad!</span
+        >
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-start gap-10 lg:items-center justify-between mt-6">
+        <ul class="flex items-center gap-4">
+          <li class="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="#01495b"
+              class="bi bi-instagram"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+              />
+            </svg>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="#01495b"
+              class="bi bi-facebook"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+              />
+            </svg>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="#01495b"
+              class="bi bi-tiktok"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"
+              />
+            </svg>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="#01495b"
+              class="bi bi-twitter-x"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+              />
+            </svg>
+          </li>
+        </ul>
+
+        <div class="flex flex-row lg:flex-col items-start justify-between w-full lg:gap-3">
+          <ul
+            class="flex flex-col lg:flex-row items-start lg:items-center gap-4 font-medium text-[#6c6c6c] text-sm"
+          >
+            <li class="hover:text-hijau-tua duration-200 cursor-pointer">
+              Insight
+            </li>
+            <li class="hover:text-hijau-tua duration-200 cursor-pointer">
+              GEO vs SEO
+            </li>
+            <li class="hover:text-hijau-tua duration-200 cursor-pointer">
+              How It Works
+            </li>
+            <li class="hover:text-hijau-tua duration-200 cursor-pointer">
+              Services
+            </li>
+            <li class="hover:text-hijau-tua duration-200 cursor-pointer">
+              Tools
+            </li>
+          </ul>
+
+          <div>
+            <ul class="text-sm font-medium flex flex-col lg:flex-row items-start lg:items-center gap-6">
+              <li class="flex items-center gap-2 text-hijau-tua">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="#01495b"
+                  class="bi bi-telephone-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                  />
+                </svg>
+                081299209093
+              </li>
+              <li class="flex items-center gap-2 text-hijau-tua">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-envelope-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+                  />
+                </svg>
+                loremipsum@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-hijau-tua/30 my-10"></div>
+
+      <div
+        class="text-sm text-[#6c6c6c] flex justify-center items-center text-center"
+      >
+        <span>©2026 GEO by Suara.com - All Rights Reserved.</span>
+      </div>
+    </footer>
 
     <script>
       const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
         navbar.classList.toggle("scrolled", window.scrollY > 20);
+      });
+    </script>
+
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+
+    <script>
+      const scrollArea = document.getElementById("tableScroll");
+      const track = document.getElementById("scrollTrack");
+      const thumb = document.getElementById("scrollThumb");
+
+      function updateThumb() {
+        const contentWidth = scrollArea.scrollWidth;
+        const visibleWidth = scrollArea.clientWidth;
+        const trackWidth = track.clientWidth;
+
+        const thumbWidth = Math.max(
+          (visibleWidth / contentWidth) * trackWidth,
+          40,
+        );
+        const maxThumbLeft = trackWidth - thumbWidth;
+        const scrollRatio =
+          scrollArea.scrollLeft / (contentWidth - visibleWidth || 1);
+
+        thumb.style.width = thumbWidth + "px";
+        thumb.style.left = scrollRatio * maxThumbLeft + "px";
+      }
+
+      scrollArea.addEventListener("scroll", updateThumb);
+      window.addEventListener("resize", updateThumb);
+      updateThumb();
+
+      // Klik/drag di track buat langsung geser scroll tabel
+      let isDragging = false;
+
+      thumb.addEventListener("mousedown", () => (isDragging = true));
+      window.addEventListener("mouseup", () => (isDragging = false));
+      window.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        const trackRect = track.getBoundingClientRect();
+        const clickX = e.clientX - trackRect.left;
+        const ratio = clickX / track.clientWidth;
+        scrollArea.scrollLeft =
+          ratio * (scrollArea.scrollWidth - scrollArea.clientWidth);
+      });
+
+      track.addEventListener("click", (e) => {
+        if (e.target === thumb) return;
+        const trackRect = track.getBoundingClientRect();
+        const clickX = e.clientX - trackRect.left;
+        const ratio = clickX / track.clientWidth;
+        scrollArea.scrollLeft =
+          ratio * (scrollArea.scrollWidth - scrollArea.clientWidth);
       });
     </script>
   </body>
