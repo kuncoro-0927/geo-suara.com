@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GEO</title>
-    <link rel="stylesheet" href="assets/css/output.css" />
+    <title>GEO By Suara.com</title>
+    <meta
+      name="description"
+      content="GEO (Generative Engine Optimization) by Suara.com — positioning brand Anda di era AI Search, dari citation di ChatGPT, Google AI, Perplexity, dan Copilot hingga conversion yang terukur."
+    />
+    <link rel="stylesheet" href="./assets/css/output.css" />
   </head>
   <body>
     <header
@@ -22,7 +26,11 @@
             <!-- Top row -->
             <div class="flex items-center justify-between">
               <div class="h-14">
-                <img class="h-full" src="./assets/images/logo-geo.png" alt="" />
+                <img
+                  class="h-full"
+                  src="./assets/images/logo-geo.png"
+                  alt="Logo GEO"
+                />
               </div>
 
               <div
@@ -31,11 +39,21 @@
                 <ul
                   class="font-medium text-sm xl:text-base text-hijau-tua flex items-center gap-6"
                 >
-                  <li><a href="#insight">Insight</a></li>
-                  <li><a href="#geovsseo">GEO vs SEO</a></li>
-                  <li><a href="#howitworks">How It Works</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#tools">Tools</a></li>
+                  <li class="hover:text-hijau duration-300">
+                    <a href="#insight">Insight</a>
+                  </li>
+                  <li class="hover:text-hijau duration-300">
+                    <a href="#geovsseo">GEO vs SEO</a>
+                  </li>
+                  <li class="hover:text-hijau duration-300">
+                    <a href="#howitworks">How It Works</a>
+                  </li>
+                  <li class="hover:text-hijau duration-300">
+                    <a href="#services">Services</a>
+                  </li>
+                  <li class="hover:text-hijau duration-300">
+                    <a href="#tools">Tools</a>
+                  </li>
                 </ul>
               </div>
 
@@ -116,7 +134,7 @@
       </nav>
 
       <div
-        class="mx-auto flex flex-col justify-center items-center text-center px-6 sm:px-16 md:px-28 lg:px-14 xl:px-20 2xl:px-44 mt-10 lg:mt-20 py-10 lg:py-20"
+        class="mx-auto flex flex-col justify-center items-center text-center px-6 sm:px-16 md:px-20 lg:px-14 xl:px-20 2xl:px-44 mt-10 lg:mt-20 py-10 lg:py-20"
       >
         <div class="flex flex-col lg:flex-row items-center justify-center">
           <span class="font-semibold text-hijau-tua"
@@ -124,7 +142,7 @@
           ><img
             class="w-auto h-10 lg:h-12 -translate-x-1"
             src="./assets/images/logo-suara.png"
-            alt=""
+            alt="Logo Suara"
           />
         </div>
         <h1
@@ -162,7 +180,7 @@
               <img
                 class="h-full w-auto rounded-lg"
                 src="./assets/images/logo-chatgpt.svg"
-                alt=""
+                alt="Logo chatgpt"
               />
               <div class="flex flex-col items-start">
                 <span class="font-medium text-sm">ChatGPT</span>
@@ -173,7 +191,7 @@
               <img
                 class="h-full w-auto rounded-lg"
                 src="./assets/images/logo-google.svg"
-                alt=""
+                alt="Logo google"
               />
               <div class="flex flex-col items-start">
                 <span class="font-medium text-sm whitespace-nowrap"
@@ -186,7 +204,7 @@
               <img
                 class="h-full w-auto rounded-lg"
                 src="./assets/images/logo-perplexity.svg"
-                alt=""
+                alt="Logo perplexity"
               />
               <div class="flex flex-col items-start">
                 <span class="font-medium text-sm">Perplexity AI</span>
@@ -197,7 +215,7 @@
               <img
                 class="h-full w-auto rounded-lg"
                 src="./assets/images/logo-microsoft-copilot.svg"
-                alt=""
+                alt="Logo microsoft copilot"
               />
               <div class="flex flex-col items-start">
                 <span class="font-medium text-sm">Microsoft Copilot</span>
@@ -1107,7 +1125,7 @@
 
         <!-- Cards -->
         <div
-          class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 lg:gap-4 xl:gap-10 mt-10"
+          class="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-3 lg:gap-4 xl:gap-10 mt-10"
         >
           <!-- Card 1 -->
           <div
@@ -1335,10 +1353,16 @@
         </div>
       </section>
     </main>
-    <footer class="p-6 py-16 sm:px-16 md:px-28 lg:px-14 xl:px-20 xl:py-20 xl:pb-10 2xl:px-44">
+    <footer
+      class="p-6 py-16 sm:px-16 md:px-28 lg:px-14 xl:px-20 xl:py-20 xl:pb-10 2xl:px-44"
+    >
       <div>
         <div class="h-20">
-          <img class="h-full" src="./assets/images/logo-geo.png" alt="" />
+          <img
+            class="h-full"
+            src="./assets/images/logo-geo.png"
+            alt="Logo Geo"
+          />
         </div>
         <div class="lg:max-w-md">
           <span class="text-sm xl:text-base text-[#6c6c6c]"
@@ -1482,6 +1506,7 @@
       </div>
     </footer>
 
+    <!-- SCRIPT STYLE NAV JIKA DI SCROLL  -->
     <script>
       const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
@@ -1491,71 +1516,20 @@
       });
     </script>
 
+    <!-- SCRIPT TOGGLE MENU NAVBAR MOBILE -->
     <script>
       const navInner = document.getElementById("navInner");
-      const navContent = document.getElementById("navContent");
       const menuBtn = document.getElementById("menuBtn");
-      const line1 = document.getElementById("line1");
-      const line2 = document.getElementById("line2");
-
-      function openMenu() {
-        navInner.classList.add("expanded");
-        navInner.classList.remove("mx-0");
-        navInner.classList.add("mx-2", "lg:mx-8");
-
-        navContent.classList.remove(
-          "bg-transparent",
-          "px-6",
-          "sm:px-16",
-          "md:px-28",
-        );
-        navContent.classList.add(
-          "bg-white/40",
-          "backdrop-blur-xl",
-          "shadow-lg",
-          "rounded-b-3xl",
-          "px-4",
-          "sm:px-14",
-          "md:px-26",
-        );
-
-        line1.style.transform = "rotate(45deg) translateY(6px)";
-        line2.style.transform = "rotate(-45deg) translateY(-6px)";
-      }
-
-      function closeMenu() {
-        navInner.classList.remove("expanded");
-        navInner.classList.add("mx-0");
-        navInner.classList.remove("mx-2", "lg:mx-8");
-
-        navContent.classList.add(
-          "bg-transparent",
-          "px-6",
-          "sm:px-16",
-          "md:px-28",
-        );
-        navContent.classList.remove(
-          "bg-white/40",
-          "backdrop-blur-xl",
-          "shadow-lg",
-          "rounded-b-3xl",
-          "px-4",
-          "sm:px-14",
-          "md:px-26",
-        );
-
-        line1.style.transform = "none";
-        line2.style.transform = "none";
-      }
 
       menuBtn.addEventListener("click", () => {
-        const isOpen = navInner.classList.contains("expanded");
-        isOpen ? closeMenu() : openMenu();
+        navInner.classList.toggle("expanded");
       });
 
       const menuLinks = document.querySelectorAll("#navMenuItems a");
       menuLinks.forEach((link) => {
-        link.addEventListener("click", closeMenu);
+        link.addEventListener("click", () => {
+          navInner.classList.remove("expanded");
+        });
       });
     </script>
 
@@ -1586,7 +1560,6 @@
       window.addEventListener("resize", updateThumb);
       updateThumb();
 
-      // Klik/drag di track buat langsung geser scroll tabel
       let isDragging = false;
 
       thumb.addEventListener("mousedown", () => (isDragging = true));

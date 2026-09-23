@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
+/* THEME — warna, font custom  */
 @theme {
   --color-hijau-tua: #01495b;
   --color-hijau: #05b5b3;
@@ -8,17 +9,19 @@
   --font-sans: "Geist", sans-serif;
 }
 
+/* GLOBAL */
 html {
   scroll-behavior: smooth;
-  
 }
 
+/*  NAVBAR — state scroll  */
 #navbar.scrolled #navContent {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(24px);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+/* NAVBAR — mobile menu (buka/tutup, animasi mekar ke bawah) */
 #navMenuItems {
   max-height: 0;
   opacity: 0;
@@ -31,6 +34,62 @@ html {
   max-height: 900px;
   opacity: 1;
 }
+
+/* Wrapper luar: margin kiri-kanan saat menu terbuka */
+#navInner {
+  transition: all 0.3s ease;
+}
+#navInner.expanded {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+@media (min-width: 1024px) {
+  #navInner.expanded {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+/* Card dalam: background, shadow, rounded, padding saat menu terbuka */
+#navContent {
+  transition: all 0.3s ease;
+}
+#navInner.expanded #navContent {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 1.5rem 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  #navInner.expanded #navContent {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+@media (min-width: 768px) {
+  #navInner.expanded #navContent {
+    padding-left: 6.5rem;
+    padding-right: 6.5rem;
+  }
+}
+
+/* Ikon hamburger → animasi jadi X saat menu terbuka */
+#line1,
+#line2 {
+  transition: transform 0.3s ease;
+}
+#navInner.expanded #line1 {
+  transform: rotate(45deg) translateY(6px);
+}
+#navInner.expanded #line2 {
+  transform: rotate(-45deg) translateY(-6px);
+}
+
+/* SCROLLBAR CUSTOM — dipakai di tabel GEO vs SEO (scroll horizontal mobile) */
+
+/* Scrollbar bergaya pill (hijau) — dipasang di elemen custom terpisah */
 .custom-scroll::-webkit-scrollbar {
   height: 6px;
 }
@@ -42,17 +101,16 @@ html {
   background: #2be5a6;
   border-radius: 9999px;
 }
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #2be5a6 #ececec;
+}
 
+/* Sembunyikan scrollbar native (dipakai bareng custom-scroll di atas) */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-/* Firefox */
-.custom-scroll {
-  scrollbar-width: thin;
-  scrollbar-color: #2be5a6 #ececec;
 }
