@@ -8,6 +8,10 @@
   --font-sans: "Geist", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #navbar.scrolled #navContent {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(24px);
@@ -23,7 +27,7 @@
     opacity 0.25s ease;
 }
 #navInner.expanded #navMenuItems {
-  max-height: 500px;
+  max-height: 900px;
   opacity: 1;
 }
 .custom-scroll::-webkit-scrollbar {
@@ -37,6 +41,15 @@
   background: #2be5a6;
   border-radius: 9999px;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Firefox */
 .custom-scroll {
   scrollbar-width: thin;

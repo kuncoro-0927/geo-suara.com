@@ -31,15 +31,25 @@
                 <ul
                   class="font-medium text-base text-hijau-tua flex items-center gap-6"
                 >
-                  <li>Insight</li>
-                  <li>GEO vs SEO</li>
-                  <li>How It Works</li>
-                  <li>Services</li>
-                  <li>Tools</li>
+                  <li><a href="#insight">Insight</a></li>
+                  <li><a href="#geovsseo">GEO vs SEO</a></li>
+                  <li><a href="#howitworks">How It Works</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#tools">Tools</a></li>
                 </ul>
               </div>
 
-              <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 w-7 shrink-0">
+              <a
+                href="#cta"
+                class="hidden lg:block leading-none font-medium text-white px-5 py-3.5 rounded-full bg-hijau-tua hover:bg-[#032f3a] duration-300 hover:shadow-lg cursor-pointer"
+              >
+                Konsultasi Gratis
+              </a>
+
+              <button
+                id="menuBtn"
+                class="lg:hidden flex flex-col gap-1.5 w-7 shrink-0"
+              >
                 <span
                   id="line1"
                   class="block h-0.5 w-full bg-hijau-tua transition-all duration-300"
@@ -56,35 +66,35 @@
               <ul class="flex flex-col gap-1 text-center pt-2">
                 <li>
                   <a
-                    href="#"
+                    href="#insight"
                     class="block py-3 text-lg font-medium text-hijau-tua"
                     >Insight</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#geovsseo"
                     class="block py-3 text-lg font-medium text-hijau-tua"
                     >GEO vs SEO</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#howitworks"
                     class="block py-3 text-lg font-medium text-hijau-tua"
                     >How It Works</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#services"
                     class="block py-3 text-lg font-medium text-hijau-tua"
                     >Services</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#tools"
                     class="block py-4 text-lg font-medium text-hijau-tua"
                     >Tools</a
                   >
@@ -92,11 +102,14 @@
               </ul>
 
               <div class="border border-hijau/10 m-6"></div>
-              <button
-                class="leading-none text-white w-full py-4 rounded-3xl bg-[#01495B]"
-              >
-                Lorem, ipsum.
-              </button>
+              <div>
+                <a
+                  href="#cta"
+                  class="text-white w-full px-4 flex justify-center items-center py-4 rounded-3xl bg-[#01495B]"
+                >
+                  Konsultasi Gratis
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -106,8 +119,7 @@
         class="mx-auto flex flex-col justify-center items-center text-center px-6 mt-10 lg:mt-20 py-10 lg:py-20"
       >
         <div class="flex flex-col lg:flex-row items-center justify-center">
-          <span
-            class="font-semibold bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+          <span class="font-semibold text-hijau-tua"
             >Generative Engine Optimization by</span
           ><img
             class="w-auto h-10 lg:h-12 -translate-x-1"
@@ -130,17 +142,17 @@
           citation hingga conversion yang terukur.
         </p>
 
-        <div class="mt-6">
-          <button
-            class="leading-none text-white px-6 py-4 rounded-full bg-[#01495B]"
+        <div class="mt-10 lg:mt-6">
+          <a
+            href="#services"
+            class="leading-none font-medium text-white px-6 py-4 rounded-full bg-hijau-tua hover:bg-[#032f3a] duration-300 hover:shadow-lg cursor-pointer"
           >
-            Lorem, ipsum.
-          </button>
+            Mulai Diagnostic Audit
+          </a>
         </div>
 
         <div class="mt-20">
-          <span
-            class="font-semibold bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+          <span class="font-semibold text-hijau-tua"
             >Tracking of 4 AI Search Engines</span
           >
           <div
@@ -210,19 +222,22 @@
 
     <main class="">
       <!-- SECTION COMPARISON TABLE -->
-      <section class="p-6 py-16 xl:p-20">
+      <section id="geovsseo" class="scroll-mt-10 p-6 py-16 xl:p-20">
         <div
           class="flex flex-col justify-center text-center items-center gap-2"
         >
-          <h2
-            class="font-semibold text-3xl lg:text-5xl bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
-          >
+          <h2 class="font-semibold text-3xl lg:text-5xl">
             GEO VS SEO <br />
-            <span class="text-black"> amet consectetur.</span>
+            <span
+              class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
+            >
+              A Paradigm Shift</span
+            >
           </h2>
-          <span class="text-sm lg:text-base text-[#6c6c6c]"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Officia.</span
+          <span class="text-sm lg:text-base text-[#6c6c6c] lg:max-w-2xl"
+            >Dari optimasi untuk crawler menjadi optimasi untuk LLM — tujuan
+            akhirnya bukan ranking, melainkan AI citation yang menghasilkan
+            konversi terukur.</span
           >
         </div>
 
@@ -543,21 +558,26 @@
       </section>
 
       <!-- SECTION HOW IT WORKS -->
-      <section class="p-6 py-16 xl:p-20 bg-gray-100">
+      <section
+        id="howitworks"
+        class="scroll-mt-10 p-6 py-16 xl:p-20 bg-gray-100"
+      >
         <div
           class="flex flex-col justify-center text-center items-center gap-2"
         >
           <h2 class="font-semibold text-3xl lg:text-5xl">
-            Lorem ipsum dolor sit <br />
+            Beyond Awareness:
+            <br />
+
             <span
               class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
             >
-              amet consectetur.</span
+              From Relevant to Conversion</span
             >
           </h2>
           <span class="text-sm lg:text-base text-[#6c6c6c]"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Officia.</span
+            >Perjalanan brand dari sekadar relevan di AI, menjadi sumber
+            kepercayaan yang mendorong konversi nyata.</span
           >
         </div>
 
@@ -565,7 +585,7 @@
           class="border border-black/20 rounded-2xl grid grid-cols-1 lg:grid-cols-4 mt-10 bg-white"
         >
           <div
-            class="border-b lg:border-r border-black/20 flex flex-col p-6 justify-start items-center text-center"
+            class="border-b lg:border-r lg:border-b-0 border-black/20 flex flex-col p-6 justify-start items-center text-center"
           >
             <span
               class="font-semibold bg-linear-to-r from-[#01495B] to-[#05B5B3] bg-clip-text text-transparent"
@@ -578,7 +598,7 @@
           </div>
 
           <div
-            class="border-b lg:border-r border-black/20 flex flex-col p-6 justify-start items-center text-center"
+            class="border-b lg:border-r lg:border-b-0 border-black/20 flex flex-col p-6 justify-start items-center text-center"
           >
             <span
               class="font-semibold bg-linear-to-r from-[#01495B] to-[#05B5B3] bg-clip-text text-transparent"
@@ -591,7 +611,7 @@
             </p>
           </div>
           <div
-            class="border-b lg:border-r border-black/20 flex flex-col p-6 justify-start items-center text-center"
+            class="border-b lg:border-r lg:border-b-0 border-black/20 flex flex-col p-6 justify-start items-center text-center"
           >
             <span
               class="font-semibold bg-linear-to-r from-[#01495B] to-[#05B5B3] bg-clip-text text-transparent"
@@ -627,8 +647,8 @@
             >
           </h2>
           <span class="text-sm lg:text-base text-[#6c6c6c]"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Officia.</span
+            >AI referral traffic mengonversi 5.1x lebih tinggi dibanding trafik
+            organik biasa.</span
           >
         </div>
 
@@ -666,26 +686,26 @@
       </section>
 
       <!-- SECTION SERVICES -->
-      <section class="p-6 py-10 xl:p-20">
+      <section id="services" class="scroll-mt-10 p-6 py-10 xl:p-20">
         <div
           class="flex flex-col justify-center text-center items-center gap-2"
         >
           <h2 class="font-semibold text-3xl lg:text-5xl">
-            Lorem ipsum dolor sit <br />
+            Three-Tier <br />
             <span
               class="bg-linear-to-r from-hijau-tua to-hijau bg-clip-text text-transparent"
             >
-              amet consectetur.</span
+              Engagement Model</span
             >
           </h2>
           <span class="text-sm lg:text-base text-[#6c6c6c]"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Officia.</span
+            >Dirancang untuk progressive commitment — dari diagnostic assessment
+            hingga full AI narrative ownership.</span
           >
         </div>
 
         <div
-          class="mt-10 flex flex-col lg:flex-row items-stretch justify-between w-full gap-10"
+          class="mt-10 lg:mt-20 flex flex-col lg:flex-row items-stretch justify-between w-full gap-10"
         >
           <!-- TIER 1 -->
           <div
@@ -950,7 +970,7 @@
       </section>
 
       <!-- SECTION TOOLS -->
-      <section class="p-6 py-10 xl:p-20">
+      <section id="tools" class="scroll-mt-10 p-6 py-10 xl:p-20">
         <div
           class="flex flex-col justify-center text-center items-center gap-2"
         >
@@ -963,8 +983,8 @@
             >
           </h2>
           <span class="text-sm lg:text-base text-[#6c6c6c]"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Officia.</span
+            >Tiga tools internal yang dipakai tim untuk audit, produksi, dan
+            monitoring visibilitas brand di AI search.</span
           >
         </div>
 
@@ -1148,7 +1168,8 @@
 
       <!-- SECTION CTA -->
       <section
-        class="shadow-md m-6 p-8 xl:m-20 lg:p-16 rounded-4xl bg-linear-to-r from-hijau-tua to-hijau text-white"
+        id="cta"
+        class="scroll-mt-24 shadow-md m-6 p-8 xl:m-20 lg:p-16 rounded-4xl bg-linear-to-r from-hijau-tua to-hijau text-white"
       >
         <div
           class="flex flex-col justify-center text-center items-center gap-2"
@@ -1201,8 +1222,8 @@
           <img class="h-full" src="./assets/images/logo-geo.png" alt="" />
         </div>
         <span class="text-sm lg:text-base text-[#6c6c6c]"
-          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
-          Non saepe a repellat dolorum ad!</span
+          >Generative Engine Optimization by Suara.com. Positioning brand di era
+          AI Search, dari citation ke conversion.</span
         >
       </div>
 
@@ -1275,19 +1296,19 @@
             class="flex flex-col lg:flex-row items-start lg:items-center gap-4 font-medium text-[#6c6c6c] text-sm"
           >
             <li class="hover:text-hijau-tua duration-200 cursor-pointer">
-              Insight
+              <a href="#insight">Insight</a>
             </li>
             <li class="hover:text-hijau-tua duration-200 cursor-pointer">
-              GEO vs SEO
+              <a href="#geovsseo">GEO vs SEO</a>
             </li>
             <li class="hover:text-hijau-tua duration-200 cursor-pointer">
-              How It Works
+              <a href="#howitworks">How It Works</a>
             </li>
             <li class="hover:text-hijau-tua duration-200 cursor-pointer">
-              Services
+              <a href="#service">Services</a>
             </li>
             <li class="hover:text-hijau-tua duration-200 cursor-pointer">
-              Tools
+              <a href="#tools">Tools</a>
             </li>
           </ul>
 
@@ -1356,55 +1377,56 @@
       const line1 = document.getElementById("line1");
       const line2 = document.getElementById("line2");
 
+      function openMenu() {
+        navInner.classList.add("expanded");
+        navInner.classList.remove("mx-0");
+        navInner.classList.add("mx-2", "lg:mx-8");
+
+        navContent.classList.remove("bg-transparent", "px-6", "xl:px-20");
+        navContent.classList.add(
+          "bg-white/40",
+          "backdrop-blur-xl",
+          "shadow-lg",
+          "rounded-b-3xl",
+          "px-4",
+          "xl:px-16",
+        );
+
+        line1.style.transform = "rotate(45deg) translateY(6px)";
+        line2.style.transform = "rotate(-45deg) translateY(-6px)";
+      }
+
+      function closeMenu() {
+        navInner.classList.remove("expanded");
+        navInner.classList.add("mx-0");
+        navInner.classList.remove("mx-2", "lg:mx-8");
+
+        navContent.classList.add("bg-transparent", "px-6", "xl:px-20");
+        navContent.classList.remove(
+          "bg-white/40",
+          "backdrop-blur-xl",
+          "shadow-lg",
+          "rounded-b-3xl",
+          "px-4",
+          "xl:px-16",
+        );
+
+        line1.style.transform = "none";
+        line2.style.transform = "none";
+      }
+
       menuBtn.addEventListener("click", () => {
-        const isOpen = navInner.classList.toggle("expanded");
+        const isOpen = navInner.classList.contains("expanded");
+        isOpen ? closeMenu() : openMenu();
+      });
 
-        if (isOpen) {
-          navInner.classList.remove("mx-0");
-          navInner.classList.add("mx-2", "lg:mx-8");
-
-          navContent.classList.remove("bg-transparent", "px-6", "xl:px-20");
-          navContent.classList.add(
-            "bg-white/40",
-            "backdrop-blur-xl",
-            "shadow-lg",
-            "rounded-b-3xl",
-            "px-4",
-            "xl:px-16",
-          );
-
-          line1.style.transform = "rotate(45deg) translateY(6px)";
-          line2.style.transform = "rotate(-45deg) translateY(-6px)";
-        } else {
-          navInner.classList.add("mx-0");
-          navInner.classList.remove("mx-2", "lg:mx-8");
-
-          navContent.classList.add("bg-transparent", "px-6", "xl:px-20");
-          navContent.classList.remove(
-            "bg-white/40",
-            "backdrop-blur-xl",
-            "shadow-lg",
-            "rounded-b-3xl",
-            "px-4",
-            "xl:px-16",
-          );
-
-          line1.style.transform = "none";
-          line2.style.transform = "none";
-        }
+      const menuLinks = document.querySelectorAll("#navMenuItems a");
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
       });
     </script>
 
-    <style>
-      .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-      }
-      .scrollbar-hide {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-    </style>
-
+    <!-- SCRIPT SCROLLBAR TABEL - MOBILE -->
     <script>
       const scrollArea = document.getElementById("tableScroll");
       const track = document.getElementById("scrollTrack");
