@@ -1565,47 +1565,68 @@
       const track = document.getElementById("scrollTrack");
       const thumb = document.getElementById("scrollThumb");
 
-      function updateThumb() {
-        const contentWidth = scrollArea.scrollWidth;
-        const visibleWidth = scrollArea.clientWidth;
-        const trackWidth = track.clientWidth;
+      let contentWidth = 0,
+        visibleWidth = 0,
+        trackWidth = 0,
+        thumbWidth = 40;
+      let ticking = false;
 
-        const thumbWidth = Math.max(
-          (visibleWidth / contentWidth) * trackWidth,
-          40,
-        );
-        const maxThumbLeft = trackWidth - thumbWidth;
-        const scrollRatio =
-          scrollArea.scrollLeft / (contentWidth - visibleWidth || 1);
-
+      // Baca geometri: hanya dipanggil saat ukuran berubah
+      function measure() {
+        contentWidth = scrollArea.scrollWidth;
+        visibleWidth = scrollArea.clientWidth;
+        trackWidth = track.clientWidth;
+        thumbWidth = Math.max((visibleWidth / contentWidth) * trackWidth, 40);
         thumb.style.width = thumbWidth + "px";
-        thumb.style.left = scrollRatio * maxThumbLeft + "px";
+        render();
       }
 
-      scrollArea.addEventListener("scroll", updateThumb);
-      window.addEventListener("resize", updateThumb);
-      updateThumb();
+      // Tulis posisi: pakai nilai cache, tanpa baca geometri
+      function render() {
+        const maxScroll = contentWidth - visibleWidth || 1;
+        const ratio = scrollArea.scrollLeft / maxScroll;
+        thumb.style.transform = `translateX(${ratio * (trackWidth - thumbWidth)}px)`;
+      }
 
-      let isDragging = false;
-
-      thumb.addEventListener("mousedown", () => (isDragging = true));
-      window.addEventListener("mouseup", () => (isDragging = false));
-      window.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-        const trackRect = track.getBoundingClientRect();
-        const clickX = e.clientX - trackRect.left;
-        const ratio = clickX / track.clientWidth;
-        scrollArea.scrollLeft =
-          ratio * (scrollArea.scrollWidth - scrollArea.clientWidth);
+      // Scroll di-throttle lewat rAF
+      scrollArea.addEventListener("scroll", () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          render();
+          ticking = false;
+        });
       });
 
-      track.addEventListener("click", (e) => {
-        if (e.target === thumb) return;
+      // Ganti window resize + panggilan awal
+      const ro = new ResizeObserver(measure);
+      ro.observe(scrollArea);
+      ro.observe(track);
+      if (scrollArea.firstElementChild)
+        ro.observe(scrollArea.firstElementChild); // tabelnya
+
+      // Drag & klik track pakai nilai cache
+      function scrollToClientX(clientX) {
         const trackRect = track.getBoundingClientRect();
-        const clickX = e.clientX - trackRect.left;
-        const ratio = clickX / track.clientWidth;
-        scrollArea.scrollLeft =
-          ratio * (scrollArea.scrollWidth - scrollArea.clientWidth);
+        const ratio = Math.min(
+          Math.max((clientX - trackRect.left) / trackWidth, 0),
+          1,
+        );
+        scrollArea.scrollLeft = ratio * (contentWidth - visibleWidth);
+      }
+
+      let isDragging = false;
+      thumb.addEventListener("pointerdown", (e) => {
+        isDragging = true;
+        thumb.setPointerCapture(e.pointerId);
+      });
+      thumb.addEventListener("pointermove", (e) => {
+        if (isDragging) scrollToClientX(e.clientX);
+      });
+      thumb.addEventListener("pointerup", () => (isDragging = false));
+
+      track.addEventListener("click", (e) => {
+        if (e.target !== thumb) scrollToClientX(e.clientX);
       });
     </script>
   </body>
